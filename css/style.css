@@ -1,0 +1,460 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0e1f33;
+    --secondary-color: #947f52;
+    --text-color: #2d3748;
+    --light-bg: #f7fafc;
+    --max-width: 1200px;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Layout */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: white;
+}
+
+nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left, .nav-right {
+    flex: 1;
+    display: flex;
+    list-style: none;
+}
+
+.nav-left {
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.nav-right {
+    justify-content: flex-start;
+    margin-left: 2rem;
+}
+
+.logo-container {
+    display: block;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* Hero sections */
+.hero, .services-hero, .contact-hero {
+    background-color: var(--light-bg);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.hero h2, .services-hero h1, .contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.services-hero h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.services-hero .cta-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Services page */
+.services-grid {
+    max-width: var(--max-width);
+    margin: 3rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-card ul ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.service-card li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.service-card li:last-child {
+    margin-bottom: 0;
+}
+
+.service-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.service-card strong {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 0.25rem;
+}
+
+.service-card p {
+    display: inline-block;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.service-card li > p {
+    display: block;
+    margin-top: 0.25rem;
+    margin-left: -1.25rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Team section */
+.team-section {
+    padding: 4rem 1rem;
+    background-color: var(--light-bg);
+}
+
+.team-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-photo {
+    margin-bottom: 1.5rem;
+}
+
+.member-photo img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+.team-logo {
+    padding: 2rem;
+}
+
+.team-logo img {
+    width: 200px;
+    height: auto;
+}
+
+.member-info h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bio-content {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.bio-content p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.bio-content p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .team-logo {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .team-logo img {
+        width: 150px;
+    }
+}
+
+/* Contact page */
+.contact-content {
+    max-width: var(--max-width);
+    margin: 3rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+.contact-info {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.info-item {
+    margin-bottom: 2rem;
+}
+
+.info-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Active nav link */
+nav a.active {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Main content */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* Offerings section */
+.offerings {
+    padding: 5rem 1rem;
+    background-color: white;
+}
+
+.offerings h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.offering-card {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.offering-card:hover {
+    transform: translateY(-5px);
+}
+
+.offering-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.offering-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.offerings-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .offerings-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .offerings {
+        padding: 3rem 1rem;
+    }
+    
+    .offerings h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
