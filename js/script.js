@@ -4,8 +4,27 @@ console.log('Script loaded');
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Content Loaded');
     
-    // Smooth scroll only for hash links
-    document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    }
+    
+    // Smooth scroll for all hash links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href');
@@ -18,24 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Basic mobile menu functionality
-    const navElement = document.querySelector('nav');
-    const navUl = document.querySelector('nav ul');
-
-    // Add mobile menu toggle button only if nav exists
-    if (navElement && navUl) {
-        const menuButton = document.createElement('button');
-        menuButton.className = 'menu-toggle';
-        menuButton.setAttribute('aria-label', 'Toggle navigation menu');
-        menuButton.innerHTML = '<span></span><span></span><span></span>';
-        navElement.insertBefore(menuButton, navUl);
-
-        menuButton.addEventListener('click', () => {
-            navUl.classList.toggle('active');
-            menuButton.classList.toggle('active');
-        });
-    }
 
     // FAQ Accordion functionality
     console.log('Setting up FAQ accordion');

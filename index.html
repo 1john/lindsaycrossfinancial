@@ -21,15 +21,34 @@
                 <li><a href="#faq">FAQs</a></li>
                 <li><a href="#events">Events</a></li>
             </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQs</a>
+            <a href="#events">Events</a>
+        </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <h2>Welcome to Lindsay Cross Financial</h2>
-            <p>Your trusted partner in financial success</p>
-        </section>
+    <section id="home" class="hero">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="vid/hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay">
+                <h2>Welcome to Lindsay Cross Financial</h2>
+                <p>Your trusted partner for all things insurance and financial success</p>
+            </div>
+        </div>
+    </section>
 
+    <main>
         <section class="mission">
             <div class="mission-content">
                 <h2>Our Mission</h2>
@@ -265,16 +284,16 @@
                 <div class="contact-info">
                     <h2>Get in Touch</h2>
                     <div class="info-item">
-                        <h3>Location</h3>
-                        <p>123 Financial District<br>Suite 100<br>City, State 12345</p>
+                        <h3>Schuyler Lindsay</h3>
+                        <p>Phone: (773) 758-2028<br>Email: stl.insurance94@gmail.com</p>
                     </div>
                     <div class="info-item">
-                        <h3>Contact Information</h3>
-                        <p>Phone: (555) 123-4567<br>Email: info@lindsaycrossfinancial.com</p>
+                        <h3>Jeremiah Cross</h3>
+                        <p>Phone: (464) 927-9210<br>Email: jdcross1547@gmail.com</p>
                     </div>
                     <div class="info-item">
                         <h3>Business Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
+                        <p>Monday - Friday: 8:00 AM - 8:00 PM<br>Saturday - Sunday: 8:00 AM - 2:00 PM</p>
                     </div>
                     <div class="info-item">
                         <h3>Schedule a Consultation</h3>
@@ -288,16 +307,6 @@
                 <p class="faq-intro">Please reach us if you cannot find an answer to your question.</p>
                 
                 <div class="faq-container">
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What types of insurance does Sid James Agency offer?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>We offer various insurance products, including life, business, Medicare, health, safe money accounts, long-term care, accidental medical, accidental death, hospital indemnity plans, foreign travel policies, critical illness, and disability insurance.</p>
-                        </div>
-                    </div>
-
                     <div class="faq-item">
                         <button class="faq-question">
                             <span>How do I file a claim?</span>
@@ -370,16 +379,6 @@
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Do I have to pay a penalty if I do not have health insurance?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>If you don't have a health plan for this year and don't qualify for an exemption, you'll pay the fee when you file your federal tax return next year. These fees vary by year. Contact us for questions.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
                             <span>What is Creditable Coverage?</span>
                             <span class="faq-icon">+</span>
                         </button>
@@ -397,6 +396,7 @@
                         <div class="faq-answer">
                             <p>If a consumer does not enroll in Part D coverage when they are first eligible, or if they have a break in Part D coverage of 63 consecutive days or longer, they may be subject to a Part D late enrollment penalty (LEP). The Part D LEP is required by law and will be calculated by CMS and added to the consumer's monthly Part D premium for as long as they are enrolled Part D coverage, even if the consumer enrolls in a $0 premium plan. To help ensure a positive consumer experience, it is important that consumers understand what the LEP is and that it will apply regardless of which carrier or plan the consumer chooses.</p>
                             <p><strong>Note:</strong> The LEP may be reduced or eliminated if the consumer qualifies for the Low-Income Subsidy Program (i.e., Extra Help).</p>
+                            <p>The Part B late enrollment penalty is 10% of the monthly Part B premium added on to your premium every month for the remainder of your life. Each year you do not have Part B in place when you are supposed to is another 10% added. These are lifetime penalties.</p>
                         </div>
                     </div>
                 </div>
@@ -404,6 +404,11 @@
 
             <section id="events" class="events-section">
                 <h2>Upcoming Events</h2>
+                
+                <div class="seminar-showcase">
+                    <img src="img/seminar_example.png" alt="Example of our Medicare seminar presentations">
+                    <p>Join us at one of our informative Medicare seminars</p>
+                </div>
                 
                 <div class="events-grid">
                     <div class="event-card">
@@ -459,6 +464,23 @@
 
                     <div class="event-card">
                         <div class="event-image">
+                            <img src="img/event78.png" alt="Turning 65 Medicare Seminar - Lisle August">
+                        </div>
+                        <div class="event-content">
+                            <h3>Turning 65 Medicare Seminar</h3>
+                            <div class="event-detail">
+                                <strong>Location:</strong>
+                                <p>Corporetum Office Campus - Lisle<br>550 Warrenville Rd Lisle, IL 60532</p>
+                            </div>
+                            <div class="event-detail">
+                                <strong>Date & Time:</strong>
+                                <p>Monday, August 3rd & Tuesday, August 4th<br>5:00 PM - 7:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-image">
                             <img src="img/event4.png" alt="Turning 65 Medicare Seminar - St. Charles">
                         </div>
                         <div class="event-content">
@@ -507,6 +529,23 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="img/event78.png" alt="Turning 65 Medicare Seminar - Lisle November/December">
+                        </div>
+                        <div class="event-content">
+                            <h3>Turning 65 Medicare Seminar</h3>
+                            <div class="event-detail">
+                                <strong>Location:</strong>
+                                <p>Corporetum Office Campus - Lisle<br>550 Warrenville Rd Lisle, IL 60532</p>
+                            </div>
+                            <div class="event-detail">
+                                <strong>Date & Time:</strong>
+                                <p>Monday, November 30th & Tuesday, December 1st<br>5:00 PM - 7:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </section>
@@ -514,7 +553,7 @@
 
     <footer>
         <div class="footer-content">
-            <p class="footer-copyright">Copyright © 2023 Sid James Agency - All Rights Reserved.</p>
+            <p class="footer-copyright">Copyright © 2023 Lindsay Cross Financial - All Rights Reserved.</p>
             <p class="footer-disclaimer">We are not connected with or endorsed by the United States government or the federal Medicare program.</p>
             <p class="footer-disclaimer">We do not offer every plan available in your area. All information provided on this site is limited to the plans we do offer in your service area. For a comprehensive overview of your options, please visit Medicare.gov or call 1‑800‑MEDICARE.</p>
         </div>
